@@ -32,7 +32,7 @@ To accurately forecast Apple's (AAPL) stock prices using Lasso regression and so
 2. **Feature Engineering**: Lagged closing prices up to 14 days.
 3. **Normalization**: Standardized input features for convergence.
 4. **Lasso Regression**: Formulated as:
-   $$ \min_x \frac{1}{2}\|Ax - b\|_2^2 + \lambda\|x\|_1 $$
+   $\min_x \frac{1}{2}\|Ax - b\|_2^2 + \lambda\|x\|_1$
 5. **ADMM Solver**: Implemented with convergence checks using primal/dual residuals.
 6. **Evaluation**: MAE, RMSE, MAPE, R² on test set.
 7. **Visualization**: True vs Predicted Close Price.
@@ -67,6 +67,18 @@ lasso-admm-stock-price-prediction/
 
 ---
 
+## Visual Results
+
+### 1. Predicted vs Actual (Line Plot)
+Shows how closely predicted values follow actual stock trends.
+![Line Plot](results/actual_vs_predicted_lineplot.png)
+
+### 2. Feature Importance (Lasso Coefficients)
+Highlights which features were retained by the L1 penalty.
+![Feature Importance](results/feature_importance_lasso.png)
+
+---
+
 ## Dependencies
 
 - numpy, pandas, matplotlib
@@ -79,12 +91,12 @@ pip install -r requirements.txt
 
 ---
 
-## 👤 Author
+## Author
 
 Developed by [@shruti-sivakumar](https://github.com/shruti-sivakumar), focusing on interpretable financial forecasting using sparse optimization techniques.
 
 ---
 
-## 📜 License
+## License
 
 MIT License — see [`LICENSE`](./LICENSE) for details.
